@@ -26,4 +26,14 @@ def fnt_selector(op):
 
 while sw == True:
     os.system('cls')
-    
+    opcion = input('1. Registrar\n2. Mostrar\n3. Salir\n- >  ')
+    if opcion == '1':
+        fnt_selector(opcion)
+    elif opcion == '2':
+        os.system('cls')
+        print('\nCantidad de registros: ',len(mi_diccionario),'\n')
+        for clave, valor in mi_diccionario.items():
+            print(f"{clave}: {valor}")
+        enter = input('\n\nPresione ENTER para continuar...')
+    elif opcion == '3':
+        sw = False
